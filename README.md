@@ -66,16 +66,17 @@
 
 
 ## API 명세
-** Context-path : /kakaoWork
-** localhost:8080/kakaoWork/swagger-ui.html  에서 캡처
+- Context-path : "/kakaoWork"
+- localhost:8080/kakaoWork/swagger-ui.html  에서 캡처
+
 ![GetApiSummary](./image/1.PNG)
 ![GetApi1](./image/api1.PNG)
 ![GetApi2](./image/api2.PNG)
 ![GetApi3](./image/api3.PNG)
 ![GetApi4](./image/api4.PNG)
 
-** mergeDept Api는 지점 통폐합 테스트를 하기 위한 Api (Api Test 요구사항)
-** MySQL 설정 후 localhost:8080/kakaoWork/swagger-ui.html 상세 참조
+- mergeDept Api는 지점 통폐합 테스트를 하기 위한 Api (Api Test 요구사항)
+- MySQL 설정 후 localhost:8080/kakaoWork/swagger-ui.html 상세 참조
     (DB Schema : kakaosecuritiesdb / id : kakao / password : kakao)
 
 
@@ -87,3 +88,4 @@
 4. 4번 API의 지점 통폐합 Test를 위한 GET Api 제작 (mergeBranch) 
     - Api 호출 시, 관리점이 분당점인 계좌를 판교점으로 UPDATE
 5. Api Doc 제작을 위한 Swagger 플러그인 사용
+
