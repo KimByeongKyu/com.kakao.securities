@@ -23,7 +23,6 @@ import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.is;
 import static org.mockito.BDDMockito.given;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
@@ -139,7 +138,7 @@ public class WorkApplicationTests {
 
 		// 확인
 		mvc.perform(
-				post("/trdSumBranch")
+				get("/trdSumBranch")
 						.contentType(MediaType.APPLICATION_JSON_UTF8)
 						.accept(MediaType.APPLICATION_JSON_UTF8)
 						.content(userJson))	// JSON contents
