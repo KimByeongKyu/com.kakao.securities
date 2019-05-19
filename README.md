@@ -66,7 +66,7 @@
 
 
 ## API 명세
-![Get Api1].(./image/1.png)
+![GetApi1](./image/1.PNG)
 
 
 ## 문제해결 (요구사항 분석 및 설계)
