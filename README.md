@@ -1,4 +1,4 @@
-# Getting Started
+# 지점 마케팅 API 개발
 
 ### Reference Documentation
 For further reference, please consider the following sections:
