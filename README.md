@@ -66,8 +66,24 @@
 
 
 ## API 명세
-![GetApi1](./image/1.PNG)
+** Context-path : /kakaoWork
+** localhost:8080/kakaoWork/swagger-ui.html  에서 캡처
+![GetApiSummary](./image/1.PNG)
+![GetApi1](./image/api1.PNG)
+![GetApi2](./image/api2.PNG)
+![GetApi3](./image/api3.PNG)
+![GetApi4](./image/api4.PNG)
+
+** mergeDept Api는 지점 통폐합 테스트를 하기 위한 Api (Api Test 요구사항)
+** MySQL 설정 후 localhost:8080/kakaoWork/swagger-ui.html 상세 참조
+    (DB Schema : kakaosecuritiesdb / id : kakao / password : kakao)
 
 
 ## 문제해결 (요구사항 분석 및 설계)
-1. Param 없는 3개의 조회는 GET 방식 Api / Param  있는 1개의 조회는 post
+1. 4개의 요청은 입출력이 모두 JSOn 이므로 Get 방식의 Rest Api 로 구현.
+2. Client - Controller - Service - Mapper(DAO) - DB (MVC 계층 설계 및 구현)
+3. 유닛 테스트 구현을 위한 WebMvtTest 채택 및 각 기능 검증
+4. 4번 API의 Exception 발생 시, Output Model 변경을 위해 @ControllerAdvice 어노테이션을 사용 및 Custom Exception throw
+4. 4번 API의 지점 통폐합 Test를 위한 GET Api 제작 (mergeBranch) 
+    - Api 호출 시, 관리점이 분당점인 계좌를 판교점으로 UPDATE
+5. Api Doc 제작을 위한 Swagger 플러그인 사용

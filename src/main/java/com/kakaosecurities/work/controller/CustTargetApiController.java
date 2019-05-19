@@ -84,6 +84,7 @@ public class CustTargetApiController {
 
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "정상적으로 조회되었습니다."),
+            @ApiResponse(code = 400, message = "관리점명(brName) Parameter를 확인해 주세요"),
             @ApiResponse(code = 403, message = "Forbidden"),
             @ApiResponse(code = 404, message = "Not Found"),
             @ApiResponse(code = 500, message = "Server Error")
