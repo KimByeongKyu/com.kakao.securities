@@ -81,7 +81,7 @@
 
 
 ## 문제해결 (요구사항 분석 및 설계)
-1. 4개의 요청은 입출력이 모두 JSOn 이므로 Get 방식의 Rest Api 로 구현.
+1. 4개의 요청은 입출력이 모두 JSON 이므로 Get 방식의 Rest Api 로 구현.
 2. Client - Controller - Service - Mapper(DAO) - DB (MVC 계층 설계 및 구현)
 3. 유닛 테스트 구현을 위한 WebMvtTest 채택 및 각 기능 검증
 4. 4번 API의 Exception 발생 시, Output Model 변경을 위해 @ControllerAdvice 어노테이션을 사용 및 Custom Exception throw
