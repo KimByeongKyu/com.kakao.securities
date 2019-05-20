@@ -85,7 +85,7 @@
 - 4개의 요청은 입출력이 모두 JSON 이므로 Get 방식의 Rest Api 로 구현.
 -  Client - Controller - Service - Mapper(DAO) - DB (MVC 계층 설계 및 구현)
 -  모델 설계
-> ![TableModeling](./image/TableModeling.PNG)
+> ![TableModeling](./image/Table_Modeling.PNG)
 - MyBatis Mapper 연동 및 SQL 생성  (/resources/mapper/CustTarget.mapper 참조)
 - Service 클래스 구현 (DTO 객체를 받아, VO 객체로 Parsing)
 - Controller 클래스 구현 및 Service 객체 연동
