@@ -56,6 +56,7 @@
 ```
 
 
+
 ## 요구사항 명세
 *	API 기능명세에서 기술된 API를 모두 개발하세요.
 *	Spring boot 기반의 프레임웍을 사용하세요.
@@ -80,12 +81,17 @@
     (DB Schema : kakaosecuritiesdb / id : kakao / password : kakao)
 
 
-## 문제해결 (요구사항 분석 및 설계)
+## 문제해결 과정
 1. 4개의 요청은 입출력이 모두 JSON 이므로 Get 방식의 Rest Api 로 구현.
 2. Client - Controller - Service - Mapper(DAO) - DB (MVC 계층 설계 및 구현)
-3. 유닛 테스트 구현을 위한 WebMvtTest 채택 및 각 기능 검증
-4. 4번 API의 Exception 발생 시, Output Model 변경을 위해 @ControllerAdvice 어노테이션을 사용 및 Custom Exception throw
-4. 4번 API의 지점 통폐합 Test를 위한 GET Api 제작 (mergeBranch) 
+3. 모델 설계
+![TableModeling](./image/TableModeling.PNG)
+4. MyBatis Mapper 연동 및 SQL 생성  (/resources/mapper/CustTarget.mapper 참조)
+5. Service 클래스 구현 (DTO 객체를 받아, VO 객체로 Parsing)
+6. Controller 클래스 구현 및 Service 객체 연동
+7. MVC 유닛 테스트 구현을 위한 WebMvtTest 채택 및 각 기능 검증
+8. 4번 API의 Exception 발생 시, Output Model 변경을 위해 @ControllerAdvice 어노테이션을 사용 및 Custom Exception throw
+9. 4번 API의 지점 통폐합 Test를 위한 GET Api 제작 (mergeBranch) 
     - Api 호출 시, 관리점이 분당점인 계좌를 판교점으로 UPDATE
-5. Api Doc 제작을 위한 Swagger 플러그인 사용
+10. Api Doc 제작을 위한 Swagger 플러그인 사용
 
