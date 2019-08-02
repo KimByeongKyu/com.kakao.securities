@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kakaosecurities.work.WorkApplicationTests" tests="4" skipped="0" failures="0" errors="0" timestamp="2019-08-02T15:20:39" hostname="Ian-Ceravi-MacBook-Pro.local" time="0.485">
+  <properties/>
+  <testcase name="targetAnnualNoTrdCustomers_Test" classname="com.kakaosecurities.work.WorkApplicationTests" time="0.253"/>
+  <testcase name="targetAnnualMaxCustomers_Test" classname="com.kakaosecurities.work.WorkApplicationTests" time="0.039"/>
+  <testcase name="trdSumBranch_Test" classname="com.kakaosecurities.work.WorkApplicationTests" time="0.153"/>
+  <testcase name="targetAnnualAmtBranch_Test" classname="com.kakaosecurities.work.WorkApplicationTests" time="0.034"/>
+  <system-out><![CDATA[00:20:37.664 [Test worker] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.kakaosecurities.work.WorkApplicationTests]
+00:20:37.673 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+00:20:37.681 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+00:20:37.711 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.kakaosecurities.work.WorkApplicationTests] from class [org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper]
+00:20:37.734 [Test worker] INFO org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.kakaosecurities.work.WorkApplicationTests], using SpringBootContextLoader
+00:20:37.738 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.kakaosecurities.work.WorkApplicationTests]: class path resource [com/kakaosecurities/work/WorkApplicationTests-context.xml] does not exist
+00:20:37.738 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.kakaosecurities.work.WorkApplicationTests]: class path resource [com/kakaosecurities/work/WorkApplicationTestsContext.groovy] does not exist
+00:20:37.738 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.kakaosecurities.work.WorkApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+00:20:37.739 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.kakaosecurities.work.WorkApplicationTests]: WorkApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+00:20:37.798 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.kakaosecurities.work.WorkApplicationTests]
+00:20:37.844 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/ian.ceravi/IdeaProjects/com.kakao.securities/build/classes/java/main/com/kakaosecurities/work/WorkApplication.class]
+00:20:37.845 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.kakaosecurities.work.WorkApplication for test class com.kakaosecurities.work.WorkApplicationTests
+00:20:37.847 [Test worker] DEBUG org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - @TestExecutionListeners is not present for class [com.kakaosecurities.work.WorkApplicationTests]: using defaults.
+00:20:37.847 [Test worker] INFO org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+00:20:37.857 [Test worker] INFO org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3107339a, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@73f8bee2, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@539fc2c2, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4aa24f58, org.springframework.test.context.support.DirtiesContextTestExecutionListener@42b12e75, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7488876f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@59acd2ee, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1ac9e0c, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@4aa5daca, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7a268f0e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@45a20906, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@209ba340]
+00:20:37.859 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.kakaosecurities.work.WorkApplicationTests]
+00:20:37.859 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.kakaosecurities.work.WorkApplicationTests]
+00:20:37.859 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.kakaosecurities.work.WorkApplicationTests]
+00:20:37.859 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.kakaosecurities.work.WorkApplicationTests]
+00:20:37.863 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@411abe89 testClass = WorkApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@5c799b55 testClass = WorkApplicationTests, locations = '{}', classes = '{class com.kakaosecurities.work.WorkApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@7f6bd7f8, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@f94fd0cd, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@cf297120, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@4d8ad413, [ImportsContextCustomizer@12fc7a32 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration, org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration, org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration, org.springframework.boot.autoconfigure.groovy.template.GroovyTemplateAutoConfiguration, org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration, org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration, org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration, org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration, org.springframework.boot.autoconfigure.jsonb.JsonbAutoConfiguration, org.springframework.boot.autoconfigure.mustache.MustacheAutoConfiguration, org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration, org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration, org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@444b519c, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@46c890fb, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@246161fc], resourceBasePath = '', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]], class annotated with @DirtiesContext [false] with mode [null].
+00:20:37.864 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.kakaosecurities.work.WorkApplicationTests]
+00:20:37.864 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.kakaosecurities.work.WorkApplicationTests]
+00:20:37.931 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper=true, server.port=-1}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.5.RELEASE)
+
+2019-08-03 00:20:38.125  INFO 8713 --- [    Test worker] c.k.work.WorkApplicationTests            : Starting WorkApplicationTests on Ian-Ceravi-MacBook-Pro.local with PID 8713 (started by ian.ceravi in /Users/ian.ceravi/IdeaProjects/com.kakao.securities)
+2019-08-03 00:20:38.128  INFO 8713 --- [    Test worker] c.k.work.WorkApplicationTests            : No active profile set, falling back to default profiles: default
+2019-08-03 00:20:39.299  INFO 8713 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-03 00:20:39.676  INFO 8713 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2019-08-03 00:20:39.676  INFO 8713 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2019-08-03 00:20:39.692  INFO 8713 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 16 ms
+2019-08-03 00:20:39.728  INFO 8713 --- [    Test worker] c.k.work.WorkApplicationTests            : Started WorkApplicationTests in 1.789 seconds (JVM running for 2.534)
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /targetAnnualNoTrdCustomers
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8"]
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.kakaosecurities.work.controller.CustTargetApiController
+           Method = public java.util.List<com.kakaosecurities.work.vo.AnnualCustVO> com.kakaosecurities.work.controller.CustTargetApiController.targetAnnualNoTrdCustomers()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json;charset=UTF-8"]
+     Content type = application/json;charset=UTF-8
+             Body = [{"year":"2018","name":"테드","acctNo":"11111114"},{"year":"2019","name":"에이스","acctNo":"11111112"}]
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /targetAnnualMaxCustomers
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8"]
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.kakaosecurities.work.controller.CustTargetApiController
+           Method = public java.util.List<com.kakaosecurities.work.vo.AnnualCustAmtVO> com.kakaosecurities.work.controller.CustTargetApiController.targetAnnualMaxCustomers()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json;charset=UTF-8"]
+     Content type = application/json;charset=UTF-8
+             Body = [{"year":"2018","name":"테드","acctNo":"11111114","sumAmt":28992000},{"year":"2019","name":"에이스","acctNo":"11111112","sumAmt":40998400}]
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /trdSumBranch
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Accept:"application/json;charset=UTF-8"]
+             Body = {"brName":"판교점"}
+    Session Attrs = {}
+
+Handler:
+             Type = com.kakaosecurities.work.controller.CustTargetApiController
+           Method = public com.kakaosecurities.work.vo.BranchAmtVO com.kakaosecurities.work.controller.CustTargetApiController.trdSumBranch(java.util.Map<java.lang.String, java.lang.Object>) throws com.kakaosecurities.work.exception.CustTargetException
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json;charset=UTF-8"]
+     Content type = application/json;charset=UTF-8
+             Body = {"brName":"판교점","brCode":"A","sumAmt":0}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /targetAnnualAmtBranch
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8"]
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.kakaosecurities.work.controller.CustTargetApiController
+           Method = public java.util.List<com.kakaosecurities.work.vo.AnnualBranchAmtVO> com.kakaosecurities.work.controller.CustTargetApiController.targetAnnualAmtBranch()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json;charset=UTF-8"]
+     Content type = application/json;charset=UTF-8
+             Body = [{"year":"2018","brList":[{"brName":"분당점","brCode":"A","sumAmt":9900000}]}]
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

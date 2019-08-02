@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.kakaosecurities.work.mapper.CustTargetMapper">
+
+    <select id="targetAnnualMaxCustomers" resultType="com.kakaosecurities.work.dto.CustInfoDTO">
+        <![CDATA[
+            with custSum as (
+            select substring(a.trdDt,1,4) "year"
+                    , b.name "name"
+                    , a.acctNo "acctNo"
+                    , sum(a.trdAmt-a.trdFee) "sumAmt"
+            from tr00m a, ac00m b
+            where a.acctNo = b.acctNo
+            and a.cnclYn = 'N'
+            group by year, name, acctNo
+            ),
+            rankTb as (
+            select dense_rank() over (partition by year order by sumAmt desc) "rank", b.*
+            from custSum b
+            )
+            select year, name, acctNo, sumAmt
+            from rankTb c
+            where c.rank = 1
+        ]]>
+    </select>
+
+    <select id="targetAnnualNoTrdCustomers" resultType="com.kakaosecurities.work.dto.CustInfoDTO">
+        <![CDATA[
+            with custYearTrd as
+            (
+            select substring(a.trdDt,1,4) "year"
+                    , b.name "name"
+                    , a.acctNo "acctNo"
+            from tr00m a, ac00m b
+            where a.acctNo = b.acctNo
+            and a.cnclYn = 'N'
+            group by year, name, acctNo
+            )
+            select  2018 "year", a.name, a.acctNo
+            from ac00m a
+            where a.acctNo not in
+                (select b.acctNo
+                    from custYearTrd b
+                    where b.year='2018')
+            union
+            select  2019 "year", a.name, a.acctNo
+            from ac00m a
+            where a.acctNo not in
+                (select b.acctNo
+                    from custYearTrd b
+                    where b.year='2019')
+        ]]>
+    </select>
+
+    <select id="targetAnnualAmtBranch" resultType="com.kakaosecurities.work.dto.BranchInfoDTO">
+        <![CDATA[
+            with custBrSum as (
+            select substring(a.trdDt,1,4) "year"
+                    , b.name "name"
+                    , a.acctNo "acctNo"
+                    , b.brCode "brCode"
+                    , sum(a.trdAmt-a.trdFee) "sumAmt"
+            from tr00m a, ac00m b
+            where a.acctNo = b.acctNo
+            and a.cnclYn = 'N'
+            group by year, name, acctNo
+            )
+            select a.year, b.brName, b.brCode, sum(a.sumAmt) "sumAmt"
+            from  custBrSum a, br00m b
+            where a.brCode = b.brCode
+            group by year, brName, brCode
+            order by year, sumAmt desc
+        ]]>
+    </select>
+
+
+    <update id="mergeBranch" >
+        update ac00m
+        set brCode = (select brCode from br00m where brName = '판교점')
+        where brCode = (select brCode from br00m where brName = '분당점')
+    </update>
+
+
+    <select id="trdSumBranch"  resultType="com.kakaosecurities.work.dto.BranchInfoDTO">
+        <![CDATA[
+            select c.brName "brName", c.brCode "brCode" , sum(a.trdAmt-a.trdFee) "sumAmt"
+            from tr00m a, ac00m b, br00m c
+            where a.acctNo = b.acctNo
+            and b.brCode = c.brCode
+            and a.cnclYn = 'N'
+            and c.brName = #{brName}
+            group by c.brName, c.brCode
+        ]]>
+    </select>
+</mapper>

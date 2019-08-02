@@ -29,6 +29,13 @@ public class CustTargetApiController {
     @Autowired
     private CustTargetService service;
 
+    @GetMapping(value="/test")
+    public String test(){
+
+        return "hello";
+    }
+
+
     @ApiOperation(value = "Swagger UI(Api 테스트 페이지) - Redirect")
     @GetMapping(value="/")
     public String home(){
